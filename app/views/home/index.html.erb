@@ -1,0 +1,16 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Swootsblog</h1>
+<p>These are my posts and you can lick it up.</p>
+</br>
+
+<% @posts.each do |post| %>
+	<div>
+		<h3><%= post.title %></h3>
+		<h4><em><%= post.date %></em></h4>
+		<p><%= sanitize(post.text) %></p>
+		</br>
+	</div>
+<% end %>
